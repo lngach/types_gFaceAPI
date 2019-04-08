@@ -1,0 +1,78 @@
+{
+  "name": "nestjs-boilerplate",
+  "version": "1.0.0",
+  "description": "NestJS + MySQL + Swagger + JWT Authorization boilerplate",
+  "author": "Cesar Vereau",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "nodemon",
+    "prestart:prod": "rm -rf dist && tsc",
+    "start:prod": "node dist/main.js",
+    "start:hmr": "node dist/server",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.0.5",
+    "@nestjs/core": "^6.0.5",
+    "@nestjs/microservices": "^6.0.5",
+    "@nestjs/passport": "^6.0.0",
+    "@nestjs/swagger": "^3.0.2",
+    "@nestjs/testing": "^6.0.5",
+    "@nestjs/typeorm": "^6.0.0",
+    "@nestjs/websockets": "^6.0.5",
+    "@types/webpack-env": "^1.13.6",
+    "bcrypt": "^3.0.5",
+    "class-validator": "^0.9.1",
+    "dotenv": "^7.0.0",
+    "fastify-formbody": "^3.1.0",
+    "jsonwebtoken": "^8.3.0",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^4.0.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.2.1",
+    "typeorm": "^0.2.7",
+    "typescript": "^3.4.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/express": "^4.0.39",
+    "@types/jest": "^24.0.11",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/node": "^11.13.0",
+    "@types/passport-jwt": "^3.0.0",
+    "@types/supertest": "^2.0.4",
+    "jest": "^24.7.1",
+    "nodemon": "^1.14.1",
+    "prettier": "^1.11.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.3",
+    "tsconfig-paths": "^3.1.1",
+    "tslint": "5.15.0",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage"
+  }
+}
